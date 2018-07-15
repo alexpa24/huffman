@@ -98,7 +98,7 @@ void Frequency(string str, int n)
 
 int main()
 {
-    char binary[1024];
+    char * binary = (char*) malloc (2000);
     string encoding;
 
     //read and store the original binary information from input.txt file
@@ -161,6 +161,7 @@ int main()
     FILE *f2 = fopen("huffman.txt", "w");
     fprintf(f2, "%s", encoding.c_str());
     fclose(f2);
-    
+    free(binary);
+
     return 0;
 }

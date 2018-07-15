@@ -112,7 +112,7 @@ int main()
 {
     char name, number;
     int value;
-    char binary[1024];
+    char * binary = (char*) malloc (2000);
     string encodedString, decodedString;
 
     //read and store the huffman encoded information from huffman.txt file
@@ -175,5 +175,6 @@ int main()
     }
     cout << endl;
     f2.close();
+    free(binary);
     return 0;
 }
